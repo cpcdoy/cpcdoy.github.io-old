@@ -24,8 +24,6 @@ tf.ENV.set('WEBGL_PACK', false);  // This needs to be done otherwise things run 
  */
 class Main {
   constructor() {
-    console.log('Loading mobilenet');
-
     //if (window.mobilecheck()) {
     //  document.getElementById('mobile-warning').hidden = false;
     //}
@@ -44,8 +42,12 @@ class Main {
 
     // } else if (evt.target.value === 'inception') {
 
+    this.styleButton = document.getElementById('stylize');
+    this.styleButton.textContent = "⌛";
+
     this.disableStylizeButtons();
     this.loadInceptionStyleModel().then(model => {
+      console.log('Loaded MobileNet');
       this.styleNet = model;
     }).finally(() => this.enableStylizeButtons());
 
@@ -79,11 +81,12 @@ class Main {
       this.loadMobileNetStyleModel(),
       this.loadSeparableTransformerModel(),
     ]).then(([styleNet, transformNet]) => {
-      console.log('Loaded styleNet');
+      console.log('Loaded StyleNet');
       this.styleNet = styleNet;
       this.transformNet = transformNet;
       this.enableStylizeButtons()
     });
+    this.styleButton.textContent = "Stylize!";
   }
 
   async loadMobileNetStyleModel() {
@@ -193,7 +196,6 @@ class Main {
     // }
 
     // Initialize buttons
-    this.styleButton = document.getElementById('stylize');
     this.styleButton.onclick = () => {
       this.disableStylizeButtons();
       this.startStyling().finally(() => {
@@ -337,7 +339,7 @@ class Main {
   }
 
   enableStylizeButtons() {
-    // this.styleButton.disabled = false;
+    this.styleButton.disabled = false;
     // this.combineButton.disabled = false;
     // this.modelSelectStyle.disabled = false;
     // this.modelSelectTransformer.disabled = false;
@@ -346,7 +348,7 @@ class Main {
   }
 
   disableStylizeButtons() {
-    // this.styleButton.disabled = true;
+    this.styleButton.disabled = true;
     // this.combineButton.disabled = true;
     // this.modelSelectStyle.disabled = true;
     // this.modelSelectTransformer.disabled = true;

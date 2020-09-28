@@ -42,8 +42,6 @@ var Main = function () {
 
     _classCallCheck(this, Main);
 
-    console.log('Loading mobilenet');
-
     //if (window.mobilecheck()) {
     //  document.getElementById('mobile-warning').hidden = false;
     //}
@@ -62,8 +60,12 @@ var Main = function () {
 
     // } else if (evt.target.value === 'inception') {
 
+    this.styleButton = document.getElementById('stylize');
+    this.styleButton.textContent = "⌛";
+
     this.disableStylizeButtons();
     this.loadInceptionStyleModel().then(function (model) {
+      console.log('Loaded MobileNet');
       _this.styleNet = model;
     }).finally(function () {
       return _this.enableStylizeButtons();
@@ -102,11 +104,12 @@ var Main = function () {
           styleNet = _ref2[0],
           transformNet = _ref2[1];
 
-      console.log('Loaded styleNet');
+      console.log('Loaded StyleNet');
       _this.styleNet = styleNet;
       _this.transformNet = transformNet;
       _this.enableStylizeButtons();
     });
+    this.styleButton.textContent = "Stylize!";
   }
 
   _createClass(Main, [{
@@ -296,7 +299,6 @@ var Main = function () {
       // }
 
       // Initialize buttons
-      this.styleButton = document.getElementById('stylize');
       this.styleButton.onclick = function () {
         _this2.disableStylizeButtons();
         _this2.startStyling().finally(function () {
@@ -448,7 +450,7 @@ var Main = function () {
   }, {
     key: 'enableStylizeButtons',
     value: function enableStylizeButtons() {
-      // this.styleButton.disabled = false;
+      this.styleButton.disabled = false;
       // this.combineButton.disabled = false;
       // this.modelSelectStyle.disabled = false;
       // this.modelSelectTransformer.disabled = false;
@@ -458,7 +460,7 @@ var Main = function () {
   }, {
     key: 'disableStylizeButtons',
     value: function disableStylizeButtons() {
-      // this.styleButton.disabled = true;
+      this.styleButton.disabled = true;
       // this.combineButton.disabled = true;
       // this.modelSelectStyle.disabled = true;
       // this.modelSelectTransformer.disabled = true;
