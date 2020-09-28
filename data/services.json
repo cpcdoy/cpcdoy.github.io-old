@@ -1,0 +1,33 @@
+{
+	"title" : "Projects",
+	"projects" : [
+		{
+			"icon" : "language",
+			"title" : "Sentence BERT",
+			"link": "https://github.com/cpcdoy/rust-sbert",
+			"badge": "[![Latest Version](https://img.shields.io/crates/v/sbert.svg)](https://crates.io/crates/sbert)",
+			"description" : "Efficient **Rust** implementation of the [**Sentence BERT**](https://arxiv.org/abs/1908.10084) NLP model for **real-time inference**"
+		},
+		{
+			"icon" : "language",
+			"title" : "Sentence Transformers",
+			"link": "https://github.com/UKPLab/sentence-transformers",
+			"badge": "[![GitHub stars](https://img.shields.io/github/stars/UKPLab/sentence-transformers.svg?style=flat&label=Stars&maxAge=2592000)](https://github.com/UKPLab/sentence-transformers/stargazers)",
+			"description" : "Major **contributor** to [**v0.3.0**](https://github.com/UKPLab/sentence-transformers/releases/tag/v0.3.0) of the library by fixing and adding support for several **new loss functions**"
+		},
+		{
+			"icon" : "play",
+			"title" : "Artflow",
+			"video": "https://www.youtube.com/embed/QtjKiANf6GY",
+			"link": "https://github.com/artflow-vr/artflow",
+			"description" : "**ArtFlow** is a **VR 3D software**, in which you can **draw your own world** using VR controllers! **Check it out**!"
+		},
+		{
+			"icon" : "play",
+			"title" : "Real-Time Path Tracer",
+			"gif": "https://user-images.githubusercontent.com/8783766/33244854-f8c8cafe-d2fe-11e7-982c-17393e29f634.gif",
+			"link": "https://github.com/DavidPeicho/cuda-pathtracer",
+			"description" : "**Real-time Path Tracer** in **CUDA** and **OpenGL** with support for **BRDF with roughness**, **volume raymarching**, texturing, normal maps, triangle meshes loading, cubemaps, scene description, UI, **and more**!"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"title": "Experience",
+	"experience": [
+		{
+			"timeperiod": "2018 - 2019",
+			"company": "Nvidia",
+			"job_title": "Deep Learning Intern",
+			"location": "Bay Area, US",
+			"logo_url": "img/nvidia.svg",
+			"website": "https://www.nvidia.com",
+			"description": "- Work on [**DLSS (Deep Learning Super Sampling)**](https://news.developer.nvidia.com/dlss-what-does-it-mean-for-game-developers), one of **Nvidia Turing GPU**'s major feature for **real-time anti-aliasing** and **upscaling** on latest **AAA video games** \n - Work on other projects like **style transfer** for portraits with **autoencoders**, etc"
+		},
+		{
+			"timeperiod": "2019 - Present",
+			"company": "Ubisoft",
+			"job_title": "Machine Learning Engineer",
+			"location": "Paris, France",
+			"logo_url": "img/ubisoft.png",
+			"website": "https://www.ubisoft.com",
+			"description": "- Work on a fast and accurate **semantic similarity engine**, for search and recommendation, using a **state-of-the-art multilingual DistilBERT**-based model and **ANNG** search in **Python** and **Rust** \n - Deployed our **microservice architecture** in production using **Kubernetes** and a complete stack of tools for **benchmarking**, **testing**, **monitoring**, **logging** and **reporting** \n - **Prototype** work on a **fast high-quality face swap** algorithm"
+		}
+	]
+}

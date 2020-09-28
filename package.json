@@ -1,0 +1,48 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "author": "cpcdoy <cpcdoy@gmail.com>",
+  "scripts": {
+    "start": "budo main.js:dist/bundle.js --live --host localhost",
+    "watch": "watchify main.js -v --debug -o dist/bundle.js",
+    "prep": "yarn && mkdirp ./static/dist",
+    "deps": "yarn",
+    "build": "yarn prep && browserify modules/style_transfer.js -o static/dist/bundle.js",
+    "dev": "yarn build && hugo server -D",
+    "build-deploy": "yarn build && hugo -d ./docs",
+    "lint": "eslint main.js --fix",
+    "deploy": "yarn build && uglifyjs dist/bundle.js -c -m -o dist/bundle.min.js",
+    "clean": "rm -rf docs"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "plugins": [
+            "syntax-async-functions",
+            "transform-regenerator"
+          ]
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "~1.0.0",
+    "babel-polyfill": "~6.26.0"
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-async-functions": "~6.13.0",
+    "babel-plugin-transform-regenerator": "~6.26.0",
+    "babel-preset-es2015": "~6.24.1",
+    "babelify": "~7.3.0",
+    "budo": "^10.0.4",
+    "eslint": "~4.11.0",
+    "eslint-config-google": "~0.9.1",
+    "mkdirp": "~0.5.1",
+    "uglify-js": "^3.3.17"
+  }
+}

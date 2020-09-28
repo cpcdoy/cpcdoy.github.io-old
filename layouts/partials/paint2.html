@@ -1,0 +1,55 @@
+{{ $paint := .Site.Data.paint }}
+{{ $social := .Site.Data.social }}
+
+<section class="darkblue" style="padding-top: 2em;">
+    <h3 class="heading">{{ $paint.title }}</h3>
+    <canvas id="paint-canvas" width="600" height="250"></canvas>
+    <div class="controls">
+        <colorList>
+            <colorItem class="black selected"></colorItem>
+            <colorItem class="red"></colorItem>
+            <colorItem class="blue"></colorItem>
+            <colorItem class="yellow"></colorItem>
+        </colorList>
+        <button id="revealColorSelect">Controls</button>
+        <div id="colorSelect">
+            <span id="newBrushSize"></span>
+            <div class="sliders">
+                <p>
+                    <label for="brush-size">Brush Size</label>
+                    <input id="brushSize" name="brushSize" type="range" min=1 max=100 value=20>
+                </p>
+            </div>
+
+            <hr>
+
+            <span id="newColor"></span>
+            <div class="sliders">
+                <p>
+                    <label for="red">Red</label>
+                    <input id="red" name="red" type="range" min=0 max=255 value=0>
+                </p>
+                <p>
+                    <label for="green">Green</label>
+                    <input id="green" name="green" type="range" min=0 max=255 value=0>
+                </p>
+                <p>
+                    <label for="blue">Blue</label>
+                    <input id="blue" name="blue" type="range" min=0 max=255 value=0>
+                </p>
+            </div>
+            <div>
+                <button id="addNewColor">Add New Color</button>
+            </div>
+        </div>
+        <button id="clear">Clear</button>
+        <button id="stylize">Stylize!</button>
+    </div>
+
+    <div class="row justify-content-md-center text-center">
+        <div class="col-12 col-lg-12 col-md-6 mb-3">
+            <h3 class="mt-3">There's more below!</h3>
+            <i class="fa fa-arrow-down" style="font-size: 5rem"></i>
+        </div>
+    </div>
+</section>

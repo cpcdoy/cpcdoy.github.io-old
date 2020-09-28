@@ -1,0 +1,5 @@
+baseURL = "https://cpcdoy/resume/"
+languageCode = "en-us"
+title = "Chady Resume"
+theme = "hugo-uilite"
+staticDir = ["static", "static/dist"]

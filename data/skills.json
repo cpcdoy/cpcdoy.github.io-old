@@ -1,0 +1,10 @@
+{
+	"title" : "Skills",
+	"skills" : {
+		"Python" : "90",
+		"Pytorch" : "80",
+		"Rust" : "70",
+		"C++" : "70",
+		"Deep Learning" : "80"
+	}
+}
