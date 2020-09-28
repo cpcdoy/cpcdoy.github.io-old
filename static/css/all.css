@@ -2083,13 +2083,17 @@ readers do not read off random characters that represent icons */
     height: 24px;
 }
 
+.fa-file:before  {
+    content: url("../svgs/file.svg");
+    width: 24px;
+    height: 24px;
+}
+
 .fa-file-alt:before {
     content: "\f15c";
 }
 
 .fa-file-archive:before {
-  width: 24px;
-  height: 24px;
     content: "\f1c6";
 }
 
