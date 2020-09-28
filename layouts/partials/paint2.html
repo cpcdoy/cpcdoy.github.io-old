@@ -6,10 +6,10 @@
     <canvas id="paint-canvas" width="600" height="250"></canvas>
     <div class="controls">
         <colorList>
-            <colorItem class="black selected"></colorItem>
-            <colorItem class="red"></colorItem>
+            <colorItem class="red selected"></colorItem>
             <colorItem class="blue"></colorItem>
             <colorItem class="yellow"></colorItem>
+            <colorItem class="black"></colorItem>
         </colorList>
         <button id="revealColorSelect">Controls</button>
         <div id="colorSelect">
@@ -27,15 +27,15 @@
             <div class="sliders">
                 <p>
                     <label for="red">Red</label>
-                    <input id="red" name="red" type="range" min=0 max=255 value=0>
+                    <input id="red" name="red" type="range" min=0 max=255 value=100>
                 </p>
                 <p>
                     <label for="green">Green</label>
-                    <input id="green" name="green" type="range" min=0 max=255 value=0>
+                    <input id="green" name="green" type="range" min=0 max=255 value=100>
                 </p>
                 <p>
                     <label for="blue">Blue</label>
-                    <input id="blue" name="blue" type="range" min=0 max=255 value=0>
+                    <input id="blue" name="blue" type="range" min=0 max=255 value=100>
                 </p>
             </div>
             <div>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <button id="clear">Clear</button>
-        <button id="stylize">Stylize!</button>
+        <button id="stylize">⌛</button>
     </div>
 
     <div class="row justify-content-md-center text-center">

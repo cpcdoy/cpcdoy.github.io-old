@@ -1,7 +1,7 @@
 window.onload = function () {
 
     // Definitions
-    var color = $(".selectedColor").css("background-color");
+    var color = '#ff0000';
     var canvas = document.getElementById("paint-canvas");
     var context = canvas.getContext("2d");
     var boundings = canvas.getBoundingClientRect();
@@ -13,7 +13,7 @@ window.onload = function () {
     var mouseX = 0;
     var mouseY = 0;
     var lineWidth = 20;
-    context.strokeStyle = 'black'; // initial brush color
+    var defaultColor = '#fc4c4f';
     context.lineWidth = lineWidth; // initial brush width
     var isDrawing = false;
 
@@ -26,7 +26,7 @@ window.onload = function () {
         //cache current color
         color = $(this).css("background-color");
 
-        context.strokeStyle = color || 'black';
+        context.strokeStyle = color || defaultColor;
         context.lineWidth = lineWidth; // initial brush width
     });
 
@@ -130,19 +130,21 @@ window.onload = function () {
         context.fillStyle = "white";
         context.fillRect(0, 0, canvas.width, canvas.height);
 
-        context.strokeStyle = color || 'black';
+        context.strokeStyle = color || defaultColor;
         context.lineWidth = lineWidth; // initial brush width
     });
 
     // Handle Save Button
-    var saveButton = document.getElementById('save');
+    // var saveButton = document.getElementById('save');
 
-    saveButton.addEventListener('click', function () {
-        var imageName = prompt('Please enter image name');
-        var canvasDataURL = canvas.toDataURL();
-        var a = document.createElement('a');
-        a.href = canvasDataURL;
-        a.download = imageName || 'drawing';
-        a.click();
-    });
+    // saveButton.addEventListener('click', function () {
+    //     var imageName = prompt('Please enter image name');
+    //     var canvasDataURL = canvas.toDataURL();
+    //     var a = document.createElement('a');
+    //     a.href = canvasDataURL;
+    //     a.download = imageName || 'drawing';
+    //     a.click();
+    // });
+
+    context.strokeStyle = defaultColor;
 };
