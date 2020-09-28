@@ -77,7 +77,7 @@
 
     <h1 class="heading">Hi, I&#39;m <span class="highlight">Chady</span></h1>
     
-    <p class="text-muted">A <b>Machine Learning Engineer</b> @ <b>Ubisoft</b>, based in <b>Paris</b></p>
+    <p class="text-muted">A <b>Machine Learning Engineer</b> @ <b>Ubisoft</b>, <br> based in <b>Paris</b></p>
     <div class="social my-4">
 
       
@@ -120,47 +120,57 @@
 
 <section class="darkblue" style="padding-top: 2em;">
     <h3 class="heading">Paint with a Neural Network!</h3>
-    <canvas id="paint-canvas" width="600" height="250"></canvas>
-    <div class="controls">
-        <colorList>
-            <colorItem class="red selected"></colorItem>
-            <colorItem class="blue"></colorItem>
-            <colorItem class="yellow"></colorItem>
-            <colorItem class="black"></colorItem>
-        </colorList>
-        <button id="revealColorSelect">Controls</button>
-        <div id="colorSelect">
-            <span id="newBrushSize"></span>
-            <div class="sliders">
-                <p>
-                    <label for="brush-size">Brush Size</label>
-                    <input id="brushSize" name="brushSize" type="range" min=1 max=100 value=20>
-                </p>
-            </div>
 
-            <hr>
-
-            <span id="newColor"></span>
-            <div class="sliders">
-                <p>
-                    <label for="red">Red</label>
-                    <input id="red" name="red" type="range" min=0 max=255 value=100>
-                </p>
-                <p>
-                    <label for="green">Green</label>
-                    <input id="green" name="green" type="range" min=0 max=255 value=100>
-                </p>
-                <p>
-                    <label for="blue">Blue</label>
-                    <input id="blue" name="blue" type="range" min=0 max=255 value=100>
-                </p>
-            </div>
-            <div>
-                <button id="addNewColor">Add New Color</button>
+    <div class="row justify-content-md-center text-center">
+        <div class="row">
+            <div class="col">
+                <canvas id="paint-canvas" width="500%" height="250px">
+                    Canvas not supported in your browser!
+                </canvas>
             </div>
         </div>
-        <button id="clear">Clear</button>
-        <button id="stylize">⌛</button>
+
+        <div class="controls">
+            <colorList>
+                <colorItem class="red selected"></colorItem>
+                <colorItem class="blue"></colorItem>
+                <colorItem class="yellow"></colorItem>
+                <colorItem class="black"></colorItem>
+            </colorList>
+            <button id="revealColorSelect">Controls</button>
+            <div id="colorSelect">
+                <span id="newBrushSize"></span>
+                <div class="sliders">
+                    <p>
+                        <label for="brush-size">Brush Size</label>
+                        <input id="brushSize" name="brushSize" type="range" min=1 max=100 value=20>
+                    </p>
+                </div>
+
+                <hr>
+
+                <span id="newColor"></span>
+                <div class="sliders">
+                    <p>
+                        <label for="red">Red</label>
+                        <input id="red" name="red" type="range" min=0 max=255 value=100>
+                    </p>
+                    <p>
+                        <label for="green">Green</label>
+                        <input id="green" name="green" type="range" min=0 max=255 value=100>
+                    </p>
+                    <p>
+                        <label for="blue">Blue</label>
+                        <input id="blue" name="blue" type="range" min=0 max=255 value=100>
+                    </p>
+                </div>
+                <div>
+                    <button id="addNewColor">Add New Color</button>
+                </div>
+            </div>
+            <button id="clear">Clear</button>
+            <button id="stylize">⌛</button>
+        </div>
     </div>
 
     <div class="row justify-content-md-center text-center">

@@ -1,7 +1,7 @@
 canvas {
   background: #fff;
   display: block;
-  margin: 50px auto 10px;
+  margin: 0px auto 10px;
   border-radius: 5px;
   box-shadow: 0 4px 0 0 #222;
   cursor: url(../img/cursor.png), crosshair;
@@ -10,7 +10,6 @@ canvas {
 .controls {
   min-height: 60px;
   margin: 0 auto;
-  width: 600px;
   border-radius: 5px;
   overflow: hidden;
   display: flex;

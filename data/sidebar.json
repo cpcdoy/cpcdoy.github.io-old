@@ -1,6 +1,6 @@
 {
 	"title" : "Hi, I'm",
 	"highlightedText" : "Chady",
-	"description" : "A <b>Machine Learning Engineer</b> @ <b>Ubisoft</b>, based in <b>Paris</b>" ,
+	"description" : "A <b>Machine Learning Engineer</b> @ <b>Ubisoft</b>, <br> based in <b>Paris</b>" ,
 	"displayPicture" : "img/photo_chady.jpg"
 }
