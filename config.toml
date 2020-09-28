@@ -1,4 +1,4 @@
-baseURL = "https://cpcdoy/resume/"
+baseURL = "https://cpcdoy.github.io/"
 languageCode = "en-us"
 title = "Chady Resume"
 theme = "hugo-uilite"

@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta name="generator" content="Hugo 0.75.1" />
+	<title>
+		
+		
+		Chady Resume
+		
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?u8vidh">
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+	<link rel="stylesheet" href="https://cpcdoy.github.io/css/paint2.css">
+	<link rel="stylesheet" type="text/css" href="https://cpcdoy.github.io/css/styles.css">
+	
+  	<link href="css/all.css" rel="stylesheet">
+
+
+	
+	<meta name="author" content="Chady Dimachkie">
+	<meta name="theme-color" content="#000000">
+
+	<link rel="alternate" type="application/rss&#43;xml" href="https://cpcdoy.github.io/index.xml" />
+	
+<meta itemprop="name" content="Chady Resume">
+<meta itemprop="description" content="">
+
+<meta name="og:title" content="Chady Resume">
+<meta name="og:description" content="">
+<meta name="og:type" content="article">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chady Resume">
+<meta name="twitter:description" content="">
+
+<meta name="article:author" content="Chady Dimachkie">
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https:\/\/cpcdoy.github.io\/",
+    "name": "Chady Resume",
+    "author": {
+        "@type": "Person",
+        "name": "Chady Dimachkie"
+    },
+    "description": "",
+}
+</script>
+ 
+
+
+</head>
+
+<body class="clearfix">
+
+
+
+
+<section id="sidebar" class="sidebar d-flex align-items-center p-5">
+  <div class="main-info">
+
+    <img src="https://cpcdoy.github.io/img/photo_chady.jpg" class="rounded-circle mb-3" width="160px">
+
+    <h1 class="heading">Hi, I&#39;m <span class="highlight">Chady</span></h1>
+    
+    <p class="text-muted">A <b>Machine Learning Engineer</b> @ <b>Ubisoft</b>, based in <b>Paris</b></p>
+    <div class="social my-4">
+
+      
+
+      
+      <a target="_blank" href="files/CV_Chady_Dimachkie_latest.pdf" rel="me">
+        <i class="fab fa-file"></i>
+      </a>
+      
+      <a target="_blank" href="https://github.com/cpcdoy" rel="me">
+        <i class="fab fa-github"></i>
+      </a>
+      
+      <a target="_blank" href="https://www.linkedin.com/in/chady-dimachkie-6109a5114/" rel="me">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      
+      <a target="_blank" href="https://stackoverflow.com/users/4979714/cpcd0y?tab=profile" rel="me">
+        <i class="fab fa-stack-overflow"></i>
+      </a>
+      
+
+      
+      <a target="_blank" href="mailto:chady.dimachkie@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+      
+
+    </div>
+
+    
+
+
+  </div>
+</section>
+
+<div class="main-content">
+	
+
+
+<section class="darkblue" style="padding-top: 2em;">
+    <h3 class="heading">Paint with a Neural Network!</h3>
+    <canvas id="paint-canvas" width="600" height="250"></canvas>
+    <div class="controls">
+        <colorList>
+            <colorItem class="black selected"></colorItem>
+            <colorItem class="red"></colorItem>
+            <colorItem class="blue"></colorItem>
+            <colorItem class="yellow"></colorItem>
+        </colorList>
+        <button id="revealColorSelect">Controls</button>
+        <div id="colorSelect">
+            <span id="newBrushSize"></span>
+            <div class="sliders">
+                <p>
+                    <label for="brush-size">Brush Size</label>
+                    <input id="brushSize" name="brushSize" type="range" min=1 max=100 value=20>
+                </p>
+            </div>
+
+            <hr>
+
+            <span id="newColor"></span>
+            <div class="sliders">
+                <p>
+                    <label for="red">Red</label>
+                    <input id="red" name="red" type="range" min=0 max=255 value=0>
+                </p>
+                <p>
+                    <label for="green">Green</label>
+                    <input id="green" name="green" type="range" min=0 max=255 value=0>
+                </p>
+                <p>
+                    <label for="blue">Blue</label>
+                    <input id="blue" name="blue" type="range" min=0 max=255 value=0>
+                </p>
+            </div>
+            <div>
+                <button id="addNewColor">Add New Color</button>
+            </div>
+        </div>
+        <button id="clear">Clear</button>
+        <button id="stylize">Stylize!</button>
+    </div>
+
+    <div class="row justify-content-md-center text-center">
+        <div class="col-12 col-lg-12 col-md-6 mb-3">
+            <h3 class="mt-3">There's more below!</h3>
+            <i class="fa fa-arrow-down" style="font-size: 5rem"></i>
+        </div>
+    </div>
+</section>
+	
+
+
+<section class="blue">
+  <h2 class="heading">Projects</h2>
+
+  <div class="row justify-content-md-center text-center">
+
+    
+
+    <div class="col-12 col-lg-6 col-md-6 mb-3">
+      <div class="card p-4">
+        
+        <i class="mt-3  fa fa-language fa-3x"></i>
+        
+        <h6 class="mt-4">Sentence BERT</h6>
+        
+        
+        <a target="_blank" href="https://github.com/cpcdoy/rust-sbert" rel="me">
+          <i class="fab fa-github bs"></i>
+          
+          
+          <a> <a href="https://crates.io/crates/sbert"><img src="https://img.shields.io/crates/v/sbert.svg" alt="Latest Version"></a> </a>
+          
+        </a>
+        
+        <p class="text-muted">Efficient <strong>Rust</strong> implementation of the <a href="https://arxiv.org/abs/1908.10084"><strong>Sentence BERT</strong></a> NLP model for <strong>real-time inference</strong></p>
+      </div>
+    </div>
+
+    
+
+    <div class="col-12 col-lg-6 col-md-6 mb-3">
+      <div class="card p-4">
+        
+        <i class="mt-3  fa fa-language fa-3x"></i>
+        
+        <h6 class="mt-4">Sentence Transformers</h6>
+        
+        
+        <a target="_blank" href="https://github.com/UKPLab/sentence-transformers" rel="me">
+          <i class="fab fa-github bs"></i>
+          
+          
+          <a> <a href="https://github.com/UKPLab/sentence-transformers/stargazers"><img src="https://img.shields.io/github/stars/UKPLab/sentence-transformers.svg?style=flat&amp;label=Stars&amp;maxAge=2592000" alt="GitHub stars"></a> </a>
+          
+        </a>
+        
+        <p class="text-muted">Major <strong>contributor</strong> to <a href="https://github.com/UKPLab/sentence-transformers/releases/tag/v0.3.0"><strong>v0.3.0</strong></a> of the library by fixing and adding support for several <strong>new loss functions</strong></p>
+      </div>
+    </div>
+
+    
+
+    <div class="col-12 col-lg-6 col-md-6 mb-3">
+      <div class="card p-4">
+        
+        <iframe src="https://www.youtube.com/embed/QtjKiANf6GY" frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen></iframe>
+        
+        <h6 class="mt-4">Artflow</h6>
+        
+        
+        <a target="_blank" href="https://github.com/artflow-vr/artflow" rel="me">
+          <i class="fab fa-github bs"></i>
+          
+          
+        </a>
+        
+        <p class="text-muted"><strong>ArtFlow</strong> is a <strong>VR 3D software</strong>, in which you can <strong>draw your own world</strong> using VR controllers! <strong>Check it out</strong>!</p>
+      </div>
+    </div>
+
+    
+
+    <div class="col-12 col-lg-6 col-md-6 mb-3">
+      <div class="card p-4">
+        
+        <div style="object-fit: contain;">
+          <img width="200em" src="https://user-images.githubusercontent.com/8783766/33244854-f8c8cafe-d2fe-11e7-982c-17393e29f634.gif">
+        </div>
+        
+        <h6 class="mt-4">Real-Time Path Tracer</h6>
+        
+        
+        <a target="_blank" href="https://github.com/DavidPeicho/cuda-pathtracer" rel="me">
+          <i class="fab fa-github bs"></i>
+          
+          
+        </a>
+        
+        <p class="text-muted"><strong>Real-time Path Tracer</strong> in <strong>CUDA</strong> and <strong>OpenGL</strong> with support for <strong>BRDF with roughness</strong>, <strong>volume raymarching</strong>, texturing, normal maps, triangle meshes loading, cubemaps, scene description, UI, <strong>and more</strong>!</p>
+      </div>
+    </div>
+
+    
+
+    <div class="col-12 col-lg-6 col-md-6 mb-3">
+      <h3 class="mt-4">More on My GitHub!</h3>
+      <a target="_blank" href="https://github.com/cpcdoy" rel="me">
+        <i class="fab fa-github bs" style="font-size: 5rem"></i>
+      </a>
+    </div>
+  </div>
+</section>
+	
+
+<section id="experience" class="green">
+  <h2 class="heading">Experience</h2>
+  <div id="timeline">
+    
+    <div class="timeline-item clearfix">
+      <div class="timeline-icon"></div>
+
+      <div class="timeline-content  right ">
+        <span class="date">2018 - 2019</span>
+        <div style="padding-top: 15px;">
+          <img src="img/nvidia.svg" alt="logo" width="100">
+        </div>
+        <h6 class="h3 my-2">Nvidia</h6>
+        
+        
+        <a target="_blank" href="https://www.nvidia.com">
+          <i class="fas fa-link"></i>
+          https://www.nvidia.com
+        </a>
+        
+        <h6 class="h5 my-2">Deep Learning Intern</h6>
+        <h6 class="h6 my-3">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          Bay Area, US
+        </h6>
+        <p class=""><ul>
+<li>Work on <a href="https://news.developer.nvidia.com/dlss-what-does-it-mean-for-game-developers"><strong>DLSS (Deep Learning Super Sampling)</strong></a>, one of <strong>Nvidia Turing GPU</strong>&rsquo;s major feature for <strong>real-time anti-aliasing</strong> and <strong>upscaling</strong> on latest <strong>AAA video games</strong></li>
+<li>Work on other projects like <strong>style transfer</strong> for portraits with <strong>autoencoders</strong>, etc</li>
+</ul>
+</p>
+      </div>
+    </div>
+    
+    <div class="timeline-item clearfix">
+      <div class="timeline-icon"></div>
+
+      <div class="timeline-content ">
+        <span class="date">2019 - Present</span>
+        <div style="padding-top: 15px;">
+          <img src="img/ubisoft.png" alt="logo" width="100">
+        </div>
+        <h6 class="h3 my-2">Ubisoft</h6>
+        
+        
+        <a target="_blank" href="https://www.ubisoft.com">
+          <i class="fas fa-link"></i>
+          https://www.ubisoft.com
+        </a>
+        
+        <h6 class="h5 my-2">Machine Learning Engineer</h6>
+        <h6 class="h6 my-3">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          Paris, France
+        </h6>
+        <p class=""><ul>
+<li>Work on a fast and accurate <strong>semantic similarity engine</strong>, for search and recommendation, using a <strong>state-of-the-art multilingual DistilBERT</strong>-based model and <strong>ANNG</strong> search in <strong>Python</strong> and <strong>Rust</strong></li>
+<li>Deployed our <strong>microservice architecture</strong> in production using <strong>Kubernetes</strong> and a complete stack of tools for <strong>benchmarking</strong>, <strong>testing</strong>, <strong>monitoring</strong>, <strong>logging</strong> and <strong>reporting</strong></li>
+<li><strong>Prototype</strong> work on a <strong>fast high-quality face swap</strong> algorithm</li>
+</ul>
+</p>
+      </div>
+    </div>
+    
+  </div>
+
+</section>
+	
+
+<section id="skills" class="aqua text-light">
+  <h2 class="heading">Skills</h2>
+
+  
+
+  <div class="skill">
+    <span class="h6">C&#43;&#43;</span>
+    <div class="progress">
+      <div class="progress-bar bg-blue" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+
+  <div class="skill">
+    <span class="h6">Deep Learning</span>
+    <div class="progress">
+      <div class="progress-bar bg-blue" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+
+  <div class="skill">
+    <span class="h6">Python</span>
+    <div class="progress">
+      <div class="progress-bar bg-blue" role="progressbar" style="width: 90%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+
+  <div class="skill">
+    <span class="h6">Pytorch</span>
+    <div class="progress">
+      <div class="progress-bar bg-blue" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+
+  <div class="skill">
+    <span class="h6">Rust</span>
+    <div class="progress">
+      <div class="progress-bar bg-blue" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  
+</section>
+</div>
+
+<div style="z-index: 4; position: relative;">
+	
+	
+</div>
+
+<div class="main-content">
+	
+</div>
+
+<script src="https://blog.uicard.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cpcdoy.github.io/js/main.js"></script>
+<script src="https://cpcdoy.github.io/js/paint2.js"></script>
+<script src="https://cpcdoy.github.io/dist/bundle.js"></script>
+</html>

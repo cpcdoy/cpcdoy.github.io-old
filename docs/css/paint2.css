@@ -1,0 +1,178 @@
+canvas {
+  background: #fff;
+  display: block;
+  margin: 50px auto 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #222;
+  cursor: url(../img/cursor.png), crosshair;
+}
+
+.controls {
+  min-height: 60px;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+div.controls > colorList {
+  list-style: none;
+  margin: 0;
+  float: left;
+  padding: 10px 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+colorList colorItem,
+#newColor {
+  display: block;
+  height: 24px;
+  width: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 3px 0 0 #222;
+}
+
+colorList colorItem {
+  display: inline-block;
+  margin: 0 5px 10px;
+}
+
+section.darkblue {
+    background-color: #384047;
+}
+
+.black {
+  background: black;
+}
+
+.red {
+  background: #fc4c4f;
+}
+
+.blue {
+  background: #4fa3fc;
+}
+
+.yellow {
+  background: #ECD13F;
+}
+
+.selected {
+  border: 5px solid #fff;
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  background: #68B25B;
+  box-shadow: 0 3px 0 0 #6A845F;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  text-shadow: 0 1px #6A845F;
+  display: flex;
+  max-width: 300px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#revealColorSelect {
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px 20px;
+  width: auto;
+  text-align: center !important;
+  height: 30px;
+}
+
+#clear, #stylize {
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px 20px;
+  width: auto;
+  text-align: center !important;
+  height: 30px;
+}
+
+/* New Color Palette */
+
+#colorSelect {
+  background: #fff;
+  border-radius: 5px;
+  clear: both;
+  margin: 20px auto 0;
+  padding: 10px;
+  width: 305px;
+  position: relative;
+  display: none;
+}
+
+#colorSelect:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+#newBrushSize {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 255);
+  float: left;
+  border: none;
+  margin: 10px 20px 20px 10px;
+}
+
+#newColor {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  box-shadow: none;
+  float: left;
+  border: none;
+  margin: 10px 20px 20px 10px;
+}
+
+.sliders p {
+  margin: 8px 0;
+  vertical-align: middle;
+}
+
+.sliders label {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 35px;
+  font-size: 14px;
+  color: #6D574E;
+}
+
+.sliders input {
+  position: relative;
+  top: 2px;
+}
+
+#colorSelect button {
+  border: none;
+  border-top: 1px solid #6A845F;
+  border-radius: 0 0 5px 5px;
+  clear: both;
+  margin: 10px -10px -7px;
+  padding: 5px 10px;
+  width: 325px;
+}
