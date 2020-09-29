@@ -44,7 +44,6 @@ window.onload = function () {
         var b = $("#blue").val();
         $("#newColor").css("background-color", "rgb(" + r + "," + g + ", " + b + ")");
         $("#newBrushSize").css("background-color", "rgb(" + r + "," + g + ", " + b + ")");
-        console.log("color ", r, g, b);
     }
 
     //update the new brush size span
@@ -91,8 +90,6 @@ window.onload = function () {
         setTouchPos(event);
         isDrawing = true;
 
-        console.log("touchstart", mouseX, mouseY);
-
         // Start Drawing
         context.beginPath();
         context.moveTo(mouseX, mouseY);
@@ -111,7 +108,6 @@ window.onload = function () {
     // Mouse Move Event
     canvas.addEventListener('touchmove', function (event) {
         setTouchPos(event);
-        console.log("touchmove", mouseX, mouseY);
 
         if (isDrawing) {
             context.lineTo(mouseX, mouseY);
