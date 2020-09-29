@@ -5,6 +5,7 @@ canvas {
   border-radius: 5px;
   box-shadow: 0 4px 0 0 #222;
   cursor: url(../img/cursor.png), crosshair;
+  touch-action: none;
 }
 
 .controls {
