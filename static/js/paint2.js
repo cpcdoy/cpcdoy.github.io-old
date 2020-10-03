@@ -1,3 +1,14 @@
+window.requestAnimFrame = (function (callback) {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimaitonFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
+
 window.onload = function () {
 
     // Definitions
@@ -72,6 +83,15 @@ window.onload = function () {
         $newColor.click();
     });
 
+    function renderCanvas() {
+        context.stroke();
+    }
+
+    (function drawLoop() {
+        requestAnimFrame(drawLoop);
+        renderCanvas();
+    })();
+
     // Handle Mouse Coordinates
     function setMouseCoordinates(event) {
         var boundings = canvas.getBoundingClientRect();
@@ -83,7 +103,7 @@ window.onload = function () {
         var rect = canvas.getBoundingClientRect();
         var touch = event.touches[0];
         mouseX = touch.clientX - rect.left;
-        mouseY =  touch.clientY - rect.top;
+        mouseY = touch.clientY - rect.top;
     }
 
     canvas.addEventListener('touchstart', function (event) {
@@ -111,7 +131,6 @@ window.onload = function () {
 
         if (isDrawing) {
             context.lineTo(mouseX, mouseY);
-            context.stroke();
         }
     }, false);
 
@@ -120,7 +139,6 @@ window.onload = function () {
 
         if (isDrawing) {
             context.lineTo(mouseX, mouseY);
-            context.stroke();
         }
     });
 
