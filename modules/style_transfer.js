@@ -36,7 +36,8 @@ class Main {
     //   if (evt.target.value === 'mobilenet') {
 
     this.styleButton = document.getElementById('stylize');
-    this.styleButton.textContent = "⌛";
+    //this.styleButton.textContent = "⌛";
+    this.styleButton.textContent = '<img src="img/loading.gif" alt="Loading..." width="20px">';
     this.disableStylizeButtons();
 
     this.loadMobileNetStyleModel().then(model => {
