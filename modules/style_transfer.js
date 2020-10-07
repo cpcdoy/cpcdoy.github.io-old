@@ -35,21 +35,21 @@ class Main {
     // this.modelSelectStyle.onchange = (evt) => {
     //   if (evt.target.value === 'mobilenet') {
 
-    // this.disableStylizeButtons();
-    // this.loadMobileNetStyleModel().then(model => {
-    //   this.styleNet = model;
-    // }).finally(() => this.enableStylizeButtons());
+    this.disableStylizeButtons();
+    this.loadMobileNetStyleModel().then(model => {
+      this.styleNet = model;
+    });
 
     // } else if (evt.target.value === 'inception') {
 
     this.styleButton = document.getElementById('stylize');
     this.styleButton.textContent = "⌛";
 
-    this.disableStylizeButtons();
-    this.loadInceptionStyleModel().then(model => {
-      console.log('Loaded MobileNet');
-      this.styleNet = model;
-    }).finally(() => this.enableStylizeButtons());
+    // this.disableStylizeButtons();
+    // this.loadInceptionStyleModel().then(model => {
+    //   console.log('Loaded MobileNet');
+    //   this.styleNet = model;
+    // });
 
     // }
     //}
@@ -68,7 +68,7 @@ class Main {
     this.disableStylizeButtons();
     this.loadSeparableTransformerModel().then(model => {
       this.transformNet = model;
-    }).finally(() => this.enableStylizeButtons());
+    });
 
     // }
     //}
@@ -84,7 +84,7 @@ class Main {
       console.log('Loaded StyleNet');
       this.styleNet = styleNet;
       this.transformNet = transformNet;
-      this.enableStylizeButtons()
+      this.enableStylizeButtons();
     });
     this.styleButton.textContent = "Stylize!";
   }
