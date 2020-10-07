@@ -35,15 +35,16 @@ class Main {
     // this.modelSelectStyle.onchange = (evt) => {
     //   if (evt.target.value === 'mobilenet') {
 
+    this.styleButton = document.getElementById('stylize');
+    this.styleButton.textContent = "⌛";
     this.disableStylizeButtons();
+
     this.loadMobileNetStyleModel().then(model => {
       this.styleNet = model;
+      console.log('Loaded StyleNet');
     });
 
     // } else if (evt.target.value === 'inception') {
-
-    this.styleButton = document.getElementById('stylize');
-    this.styleButton.textContent = "⌛";
 
     // this.disableStylizeButtons();
     // this.loadInceptionStyleModel().then(model => {
@@ -68,6 +69,7 @@ class Main {
     this.disableStylizeButtons();
     this.loadSeparableTransformerModel().then(model => {
       this.transformNet = model;
+      console.log('Loaded Transformer');
     });
 
     // }
@@ -81,7 +83,6 @@ class Main {
       this.loadMobileNetStyleModel(),
       this.loadSeparableTransformerModel(),
     ]).then(([styleNet, transformNet]) => {
-      console.log('Loaded StyleNet');
       this.styleNet = styleNet;
       this.transformNet = transformNet;
       this.enableStylizeButtons();

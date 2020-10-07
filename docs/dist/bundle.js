@@ -53,23 +53,22 @@ var Main = function () {
     // this.modelSelectStyle.onchange = (evt) => {
     //   if (evt.target.value === 'mobilenet') {
 
-    // this.disableStylizeButtons();
-    // this.loadMobileNetStyleModel().then(model => {
-    //   this.styleNet = model;
-    // }).finally(() => this.enableStylizeButtons());
+    this.styleButton = document.getElementById('stylize');
+    this.styleButton.textContent = "⌛";
+    this.disableStylizeButtons();
+
+    this.loadMobileNetStyleModel().then(function (model) {
+      _this.styleNet = model;
+      console.log('Loaded StyleNet');
+    });
 
     // } else if (evt.target.value === 'inception') {
 
-    this.styleButton = document.getElementById('stylize');
-    this.styleButton.textContent = "⌛";
-
-    this.disableStylizeButtons();
-    this.loadInceptionStyleModel().then(function (model) {
-      console.log('Loaded MobileNet');
-      _this.styleNet = model;
-    }).finally(function () {
-      return _this.enableStylizeButtons();
-    });
+    // this.disableStylizeButtons();
+    // this.loadInceptionStyleModel().then(model => {
+    //   console.log('Loaded MobileNet');
+    //   this.styleNet = model;
+    // });
 
     // }
     //}
@@ -88,8 +87,7 @@ var Main = function () {
     this.disableStylizeButtons();
     this.loadSeparableTransformerModel().then(function (model) {
       _this.transformNet = model;
-    }).finally(function () {
-      return _this.enableStylizeButtons();
+      console.log('Loaded Transformer');
     });
 
     // }
@@ -104,7 +102,6 @@ var Main = function () {
           styleNet = _ref2[0],
           transformNet = _ref2[1];
 
-      console.log('Loaded StyleNet');
       _this.styleNet = styleNet;
       _this.transformNet = transformNet;
       _this.enableStylizeButtons();

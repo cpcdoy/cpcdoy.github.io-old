@@ -37,7 +37,7 @@ window.onload = function () {
         color = $(this).css("background-color");
 
         context.strokeStyle = color || defaultColor;
-        context.lineWidth = lineWidth; // initial brush width
+        // context.lineWidth = lineWidth; // initial brush width
     });
 
     //When "Add Color" is pressed
@@ -84,7 +84,8 @@ window.onload = function () {
     });
 
     function renderCanvas() {
-        context.stroke();
+        if (isDrawing)
+            context.stroke();
     }
 
     (function drawLoop() {
@@ -145,10 +146,12 @@ window.onload = function () {
     // Mouse Up Event
     canvas.addEventListener('mouseup', function (event) {
         setMouseCoordinates(event);
+        renderCanvas();
         isDrawing = false;
     });
 
     canvas.addEventListener('touchend', function (event) {
+        renderCanvas();
         isDrawing = false;
     }, false);
 
