@@ -11,13 +11,22 @@
 			"description": "- Work on [**DLSS (Deep Learning Super Sampling)**](https://news.developer.nvidia.com/dlss-what-does-it-mean-for-game-developers), one of **Nvidia Turing GPU**'s major feature for **real-time anti-aliasing** and **upscaling** on latest **AAA video games** \n - Work on other projects like **style transfer** for portraits with **autoencoders**, etc"
 		},
 		{
-			"timeperiod": "2019 - Present",
+			"timeperiod": "2019 - 2021",
 			"company": "Ubisoft",
 			"job_title": "Machine Learning Engineer",
 			"location": "Paris, France",
 			"logo_url": "img/ubisoft.png",
 			"website": "https://www.ubisoft.com",
 			"description": "- Work on a fast and accurate **semantic similarity engine**, for search and recommendation, using a **state-of-the-art multilingual DistilBERT**-based model and **ANNG** search in **Python** and **Rust** \n - Deployed our **microservice architecture** in production using **Kubernetes** and a complete stack of tools for **benchmarking**, **testing**, **monitoring**, **logging** and **reporting** \n - **Prototype** work on a **fast high-quality face swap** algorithm"
+		},
+		{
+			"timeperiod": "2021 - Present",
+			"company": "Ntropy",
+			"job_title": "Founding Machine Learning Engineer",
+			"location": "Remote from Paris, France",
+			"logo_url": "img/ntropy.png",
+			"website": "https://www.ntropy.com",
+			"description": "- The company went from **3 to 27 people in less than 2 years with a Series A funding**\n- Worked on setting up the ***initial pipeline for transaction categorization**:\n  - **Named entity extraction (NER)**: Extraction of entities from (non-)natural language consumer and business bank transactions in **multiple languages using \"cycles training\" to avoid forgetting**\n  - **Transaction categorization**: Find the category of a transaction from a list that is not set and that can change based on what our customers want using a **BERT encoder for zero-shot classification approach**\n- Researched and improved NER using a **Bi-GRU augmented tokenizer** and a **custom noise-robust multi-head DeBERTa** with a **Knowledge Base** (an approach I developed so the model can use **new information without any retraining**)\n- Built an **in-house human labeling team** with **pay, testing, and training**, as well as a **hierarchy of labelers and reviewers**\n- Labelers would receive a **\"cluster labeling task\"** which are **similar tasks grouped together for pattern clarity**\n- Developed a **configurable generative model** to help our sales team **unblock our customers from benchmarking** with us **if they face data privacy or even lack of data issues** with transaction data\n- Presented at **PyData 2022**"
 		}
 	]
 }
